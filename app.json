@@ -1,0 +1,12 @@
+{
+  "name": "Trime",
+  "displayName": "Trime",
+  "expo": {
+    "name": "Trime",
+    "slug": "Trime",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
