@@ -1,6 +1,7 @@
 // import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, ScrollView, View, TextInput, Button, Alert, ImageBackground } from 'react-native';
+import Hero from './../components/Hero.tsx';
 // import heroImg from "./../images/hero-image.png"
 
 import FacebookIcon from "../images/svg/icon/FacebookIcon";
@@ -9,9 +10,7 @@ import GoogleIcon from "../images/svg/icon/GoogleIcon";
 export default function Login() {
   return (
     <ScrollView>
-      <ImageBackground source={require('./../images/hero-image.png')}>
-           <Text>Trime</Text>
-      </ImageBackground>
+      <Hero />
       <View>
 
         <Text>Email</Text>
