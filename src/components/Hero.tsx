@@ -1,17 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, View, ImageBackground } from 'react-native';
-import HeroTopWave from './../images/svg/heroTopWave';
+import HeroTopWave from './../images/svg/HeroTopWave';
 import HeroWave from '../images/svg/HeroWave';
-import { transform } from '@babel/core';
 
 
 
 
-const Hero = () => {
+
+const Hero = ({height}) => {
     return( 
+    
       <View>
+       
          <HeroTopWave style={styles.topWave}/>
-         <ImageBackground  style={styles.height} source={require('./../images/hero-image.png')}>
+         <ImageBackground blurRadius={0} style={styles.height} source={require('./../images/hero-image.png') }>
          <View>
             <Text style={styles.text} >Trime</Text>
             </View>
@@ -41,10 +43,11 @@ const Hero = () => {
     },
     height: {
       position:'absolute',
-        height:450,
-        zIndex:-1,
-        marginTop:10,
-        width:'100%'
+      height:450,
+      zIndex:-1,
+      marginTop:10,
+      width:'100%',
+
         
       
     },
@@ -53,7 +56,7 @@ const Hero = () => {
        zIndex:3
     },
     topWave:{
-      transform:'scale(-1,-1)', 
+     transform:'scale(-1,-1)', 
       zIndex:1 
     }
   });

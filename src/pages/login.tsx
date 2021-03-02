@@ -10,7 +10,7 @@ import GoogleIcon from "../images/svg/icon/GoogleIcon";
 export default function Login() {
   return (
     <ScrollView>
-      <Hero />
+      <Hero height="300" />
       <View>
 
         <Text>Email</Text>

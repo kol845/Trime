@@ -2,11 +2,11 @@
 // import { checkForUpdateAsync } from 'expo-updates';
 import React from 'react';
 // import { StyleSheet, Text, View } from 'react-native';
-import Login from './src/pages/login'
+import Feed from './src/pages/feed'
 
 export default function App() {
   return (
-    <Login/>
+    <Feed/>
   );
 }
 
