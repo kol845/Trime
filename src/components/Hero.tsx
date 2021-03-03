@@ -14,9 +14,9 @@ const Hero = ({height}) => {
        
          <HeroTopWave style={styles.topWave}/>
          <ImageBackground blurRadius={0} style={styles.height} source={require('./../images/hero-image.png') }>
-         <View>
+          <View>
             <Text style={styles.text} >Trime</Text>
-            </View>
+          </View>
          </ImageBackground>
          <HeroWave style={styles.wave}/>
     </View>
