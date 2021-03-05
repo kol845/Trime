@@ -13,7 +13,7 @@ const Hero = ({height}) => {
       <View>
        
          <HeroTopWave style={styles.topWave}/>
-         <ImageBackground blurRadius={0} style={styles.height} source={require('./../images/hero-image.png') }>
+         <ImageBackground  style={styles.height} source={require('./../images/hero-image.png') }>
           <View>
             <Text style={styles.text} >Trime</Text>
           </View>
@@ -47,6 +47,7 @@ const Hero = ({height}) => {
       zIndex:-1,
       marginTop:10,
       width:'100%',
+      right:0
 
         
       
@@ -56,7 +57,11 @@ const Hero = ({height}) => {
        zIndex:3
     },
     topWave:{
-     transform:'scale(-1,-1)', 
+      transform: [
+        { rotateX: "175deg" },
+        { rotateY:"175deg"}
+      
+      ] ,
       zIndex:1 
     }
   });

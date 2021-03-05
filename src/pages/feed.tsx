@@ -55,7 +55,7 @@ export default function Feed() {
 
         <View style={{flexDirection:'row'}}>
              <FeedBottomGgLeft style={styles.bottomBg}/>
-             <FeedBottomBgRight style={styles.bottomBg}/>
+             <FeedBottomBgRight style={styles.bottomBgRight}/>
         </View>
        
         
@@ -126,9 +126,15 @@ const styles = StyleSheet.create({
     bottomBg:{
         position:'absolute',
         zIndex:-3,
-        bottom:0,
+        bottom:-28,
         
 
+    },
+    bottomBgRight:{
+        position:'absolute',
+        zIndex:-3,
+        bottom:-28,
+        right:0
     },
     text: {
         // fontFamily:'helvetica',
