@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity,View } from 'react-native';
 
 
 
@@ -8,7 +8,8 @@ const FeedButtons = ({name, image}) => {
         
              <TouchableOpacity style={styles.button}>
 
-                <Text style={{color:'#fff'}}>{image} {name}</Text>
+                <View style={{alignSelf:'center'}}>{image}</View>
+                <Text style={{color:'#fff',alignSelf:'center'}}> {name}</Text>
                 
             </TouchableOpacity>
         
@@ -20,8 +21,11 @@ const styles = StyleSheet.create({
     button:{
         backgroundColor:'rgba(213, 130, 88,0.8)',
         borderRadius:5,
-        padding:4,
-        paddingVertical:8,
+        paddingVertical:4,
+        paddingHorizontal:8,
+        width:80
+        
+    
         
        }
 
