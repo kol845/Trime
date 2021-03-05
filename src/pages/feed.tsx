@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, ScrollView, View, TextInput, Button, Alert, ImageBackground } from 'react-native';
-import FeedBackground from './../images/svg/FeedBackground'
+import { StyleSheet, Text, ScrollView, View, TextInput, Button, Alert, ImageBackground,Image } from 'react-native';
+
 import FeedBackgroundRight from './../images/svg/FeedBackgroundRight'
 import FeedBackgroundMain from './../images/svg/FeedBackgroundMain'
 import FeedButtons from './../components/FeedButtons'
@@ -12,6 +12,8 @@ import Pen from './../images/svg/icon/Pen'
 import FeedCard from './../components/FeedCard'
 import FeedBottomGgLeft from './../images/svg/FeedBottomGgLeft'
 import FeedBottomBgRight from './../images/svg/FeedBottomBgRight'
+import FeedTopWave from './../images/svg/FeedTopWave'
+
 
 export default function Feed() {
     return (
@@ -19,14 +21,15 @@ export default function Feed() {
 
            <View style={styles.headerContainer}>
 
-               <FeedBackground style={styles.bgTopLeft}/>
+        
                <FeedBackgroundRight style={styles.bgTopRight}/>
                <FeedBackgroundMain style={styles.mainBg}/>
                <FeedPageWave style={styles.wave}/>
-               <View style={{marginBottom:50}}>
+               <FeedTopWave style={{position:'absolute',top:149,left:0}}/>
+               <View>
                     <Text style={styles.text} >Trime</Text>
-                    <Text style={styles.smallText}>Welcome back</Text>
-                    <Text style={styles.sm}>Eliza!</Text>
+                    <Image source={require('./../images/profilepic.png')} style={{top:12}}/>
+                    
                     
                </View>
                
@@ -43,10 +46,11 @@ export default function Feed() {
         </View>
 
         <View style={styles.card}>
-              <FeedCard/> 
-              <FeedCard/>
-              <FeedCard/>
-              <FeedCard/> 
+              <FeedCard url={require('./../images/trainer1.png')}/> 
+              <FeedCard url={require('./../images/trainer2.png')}/> 
+              <FeedCard url={require('./../images/trainer3.png')}/> 
+              <FeedCard url={require('./../images/trainer4.png')}/>   
+              
         </View>
 
         <View style={{flexDirection:'row'}}>
@@ -86,7 +90,8 @@ const styles = StyleSheet.create({
       
     },
     mainBg: {
-        ...StyleSheet.absoluteFillObject
+        ...StyleSheet.absoluteFillObject,
+        
     },
     wave:{
         position: 'absolute',
@@ -94,18 +99,18 @@ const styles = StyleSheet.create({
         marginTop:155
     },
     brow:{
-        
+        marginTop:8,
+        marginBottom:20,
         flexDirection:'row', 
         justifyContent:'space-around',
-        backgroundColor:'rgba(255,255,255,0.5)',
+        backgroundColor:'rgba(255,255,255,0.7)',
         padding:7,
         borderRadius:7,
         marginHorizontal:3,
-        marginTop:25,
         shadowColor: "#000",
         shadowOffset: {
 	       width: 0,
-	       height: 2,
+	       height: 3,
         },
         shadowOpacity: 0.23,
         shadowRadius: 2.62,
@@ -115,6 +120,7 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         flexWrap:'wrap',
         justifyContent:'space-around',
+       
         
     },
     bottomBg:{
@@ -133,7 +139,7 @@ const styles = StyleSheet.create({
          fontWeight:'700',
          textAlign:'center',
          paddingHorizontal:30,
-        
+         marginBottom:40,
          backgroundColor:'rgba(255,255,255,0.1)',
          borderRadius:9
        
