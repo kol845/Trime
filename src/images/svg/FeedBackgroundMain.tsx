@@ -3,7 +3,7 @@ import Svg, { Path, Defs, LinearGradient, Stop } from "react-native-svg"
 
 function FeedBackgroundMain(props) {
   return (
-    <Svg width={375} height={348} viewBox="0 0 375 348" fill="none" {...props}>
+    <Svg width={415} height={356} viewBox="0 0 375 348" fill="none" {...props}>
       <Path
         d="M222.237 298.631c146.234-27.195 249.008-134.053 229.552-238.675C432.333-44.667 298.014-107.434 151.78-80.24 5.546-53.046-97.228 53.813-77.772 158.435c19.457 104.623 153.775 167.39 300.009 140.196z"
         fill="url(#paint0_linear)"

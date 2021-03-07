@@ -8,6 +8,7 @@ import HeroWave from '../images/svg/HeroWave';
 
 
 const Hero = ({height}) => {
+  
     return( 
     
       <View>
@@ -47,14 +48,18 @@ const Hero = ({height}) => {
       zIndex:-1,
       marginTop:10,
       width:'100%',
-      right:0
+      flex:1,
+      resizeMode: "stretch",
+      justifyContent: "center"
+      
 
         
       
     },
     wave:{
       marginTop:326,
-       zIndex:3
+       zIndex:3,
+       right:0
     },
     topWave:{
       transform: [

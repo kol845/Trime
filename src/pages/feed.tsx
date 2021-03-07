@@ -23,12 +23,15 @@ export default function Feed() {
 
         
                <FeedBackgroundRight style={styles.bgTopRight}/>
-               <FeedBackgroundMain style={styles.mainBg}/>
+               <View style={styles.mainBg}>
+                   <FeedBackgroundMain/>
+               </View>
+              
+               
                <FeedPageWave style={styles.wave}/>
-               <FeedTopWave style={{position:'absolute',top:149,left:0}}/>
                <View>
                     <Text style={styles.text} >Trime</Text>
-                    <Image source={require('./../images/profilepic.png')} style={{top:12}}/>
+                    <Image source={require('./../images/profilepic.png')} style={{top:40}}/>
                     
                     
                </View>
@@ -91,30 +94,30 @@ const styles = StyleSheet.create({
     },
     mainBg: {
         ...StyleSheet.absoluteFillObject,
+        resizeMode: "cover"
+        
         
     },
     wave:{
         position: 'absolute',
         zIndex:-1,
-        marginTop:155
-    },
+        marginTop:160,    },
     brow:{
-        marginTop:8,
+        marginTop:35,
         marginBottom:20,
         flexDirection:'row', 
         justifyContent:'space-around',
-        backgroundColor:'rgba(255,255,255,0.7)',
+        backgroundColor:'rgb(255,255,255)',
         padding:7,
         borderRadius:7,
-        marginHorizontal:3,
         shadowColor: "#000",
         shadowOffset: {
-	       width: 0,
-	       height: 3,
+	       width: 2,
+	       height: 5,
         },
-        shadowOpacity: 0.23,
+        shadowOpacity: 0.33,
         shadowRadius: 2.62,
-        elevation: 4
+        elevation: 7
     },
     card:{
         flexDirection:'row',
