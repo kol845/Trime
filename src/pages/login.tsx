@@ -1,7 +1,10 @@
 // import { StatusBar } from 'expo-status-bar';
+
 import React, { useState } from 'react';
-import { Platform, StyleSheet, Text, View, TextInput, Button, Alert, ImageBackground, StatusBar } from 'react-native';
+import { Platform, StyleSheet, Text, View,ScrollView, TextInput, Button, Alert, ImageBackground, StatusBar } from 'react-native';
 import { Dimensions } from 'react-native';
+
+import Hero from './../components/Hero';
 
 // import heroImg from "./../images/hero-image.png"
 
@@ -16,15 +19,15 @@ export default function Login() {
   const [ptInfoVisible, setPtInfoVisible] = useState(false);
   
   return (
+
     <View style={styles.loginRoot}>
       <InfoModal visible={ptInfoVisible} closeFunc={()=>setPtInfoVisible(!ptInfoVisible)}>
         Answer the questions so we can give you the best recommendations on PT’s just for you!{"\n"}{"\n"}
         You can also fill it in on your profile later on. 
       </InfoModal>
+      <Hero  />
+     
 
-      <ImageBackground style={styles.hero} source={require('./../images/hero-image.png')}>
-          <Text>Trime</Text>
-      </ImageBackground>
       <View>
         <View style={styles.bodyContainer}>
           <LoginInput label="Email" placeholder="Enter email" isPassword={false}/>
@@ -41,13 +44,13 @@ export default function Login() {
           </View>
         </View>
         <View>
-          <Text>Or</Text>
+          
           <View/>
           <View/>
         </View>
       </View>
       {/* </ScrollView> */}
-      <Footer  isSignUp={true}/>
+      <Footer  isSignUp={false}/>
     </View>
     
   );
