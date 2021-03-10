@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Component} from 'react';
 import { StyleSheet, Text, ScrollView, View, TextInput, Button, Alert, ImageBackground,Image } from 'react-native';
 
 import FeedBackgroundRight from './../images/svg/FeedBackgroundRight'
@@ -15,58 +15,66 @@ import FeedBottomBgRight from './../images/svg/FeedBottomBgRight'
 import FeedTopWave from './../images/svg/FeedTopWave'
 
 
-export default function Feed() {
-    return (
-       <View>
+import {  createBottomTabNavigator,createAppContainer } from 'react-navigation';
+import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
+import {Icon} from 'react-native-elements';
 
-           <View style={styles.headerContainer}>
+import Login from './login';
 
-        
-               <FeedBackgroundRight style={styles.bgTopRight}/>
-               <View style={styles.mainBg}>
-                   <FeedBackgroundMain/>
-               </View>
-              
-               
-               <FeedPageWave style={styles.wave}/>
-               <View>
-                    <Text style={styles.text} >Trime</Text>
-                    <Image source={require('./../images/profilepic.png')} style={{top:40}}/>
+class Feed extends Component  {
+    render() {
+        return (
+            <View>
+     
+                <View style={styles.headerContainer}>
+     
+             
+                    <FeedBackgroundRight style={styles.bgTopRight}/>
+                    <View style={styles.mainBg}>
+                        <FeedBackgroundMain/>
+                    </View>
+                   
                     
+                    <FeedPageWave style={styles.wave}/>
+                    <View>
+                         <Text style={styles.text} >Trime</Text>
+                         <Image source={require('./../images/profilepic.png')} style={{top:40}}/>
+                         
+                         
+                    </View>
                     
-               </View>
-               
-
-           </View>
-
-        <View style={styles.brow}>
-
-              <FeedButtons name='Eliza' image={<Pen/>}/>
-              <FeedButtons name='BOOK' image={<Calender/>}/>
-              <FeedButtons name='HEALTH' image={<Health/>}/>
-              <FeedButtons name='CHAT' image={<Chat/>}/>
-
-        </View>
-
-        <View style={styles.card}>
-              <FeedCard url={require('./../images/trainer1.png')}/> 
-              <FeedCard url={require('./../images/trainer2.png')}/> 
-              <FeedCard url={require('./../images/trainer3.png')}/> 
-              <FeedCard url={require('./../images/trainer4.png')}/>   
-              
-        </View>
-
-        <View style={{flexDirection:'row'}}>
-             <FeedBottomGgLeft style={styles.bottomBg}/>
-             <FeedBottomBgRight style={styles.bottomBgRight}/>
-        </View>
-       
-        
-
-    </View>
-       
-    );
-}
+     
+                </View>
+     
+             <View style={styles.brow}>
+     
+                   <FeedButtons name='Eliza' image={<Pen/>}/>
+                   <FeedButtons name='BOOK' image={<Calender/>}/>
+                   <FeedButtons name='HEALTH' image={<Health/>}/>
+                   <FeedButtons name='CHAT' image={<Chat/>}/>
+     
+             </View>
+     
+             <View style={styles.card}>
+                   <FeedCard url={require('./../images/trainer1.png')}/> 
+                   <FeedCard url={require('./../images/trainer2.png')}/> 
+                   <FeedCard url={require('./../images/trainer3.png')}/> 
+                   <FeedCard url={require('./../images/trainer4.png')}/>   
+                   
+             </View>
+     
+             <View style={{flexDirection:'row'}}>
+                  <FeedBottomGgLeft style={styles.bottomBg}/>
+                  <FeedBottomBgRight style={styles.bottomBgRight}/>
+             </View>
+            
+             
+     
+         </View>
+            
+         );
+     }
+}     
 
 const styles = StyleSheet.create({
     bgTopLeft:{
@@ -157,3 +165,32 @@ const styles = StyleSheet.create({
    
        }
   });
+  const TabNavigator=createMaterialBottomTabNavigator(
+    {
+        FeedPage:{
+            screen:Feed,
+            navigationOptions:{
+                tabBarLabel:'FeedPage',
+                tabBarIcon:()=>{
+                    <View>
+                        
+                    </View>
+                }
+            }
+        },
+        LoginPage:{
+            screen:Login,
+            navigationOptions:{
+                tabBarLabel:'LoginPage',
+                tabBarIcon:()=>{
+                    <View>
+                        
+                    </View>
+                }
+            }
+        }
+    }
+);
+
+
+export default createAppContainer(TabNavigator);
