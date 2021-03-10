@@ -11,6 +11,7 @@ import Hero from './../components/Hero';
 import Footer from './../components/Footer'
 import InfoModal from '../components/modals/InfoModal'
 import LoginInput from '../components/LoginInput'
+import TrimeButton from '../components/TrimeButton'
 
 const vh = Dimensions.get('window').height/100;
 
@@ -29,34 +30,14 @@ export default function Login() {
      
 
       <ScrollView>
-        <Text style={{ fontFamily:"Montserrat-Bold", fontSize: 28 }}>
-            Hello world
-        </Text>
-        <Text style={{ fontSize: 28 }}>
-            HELLOO"!OOKDOPKASJOPDKASOPIDJKASOIPDJKIOASJDIOASJDIOJSA
-        </Text>
-        <Text style={{ fontFamily: "RedHatDisplay-Black", fontSize: 10 }}>
-            HELLOO"!OOKDOPKASJOPDKASOPIDJKASOIPDJKIOASJDIOASJDIOJSA
-        </Text>
-        <Text style={{ fontFamily: "RedHatDisplay-BoldItalic", fontSize: 20 }}>
-            HELLOO"!OOKDOPKASJOPDKASOPIDJKASOIPDJKIOASJDIOASJDIOJSA
-        </Text>
-        <Text style={{fontSize: 28 }}>
-            HELLOO"!OOKDOPKASJOPDKASOPIDJKASOIPDJKIOASJDIOASJDIOJSA
-        </Text>
         <View style={styles.bodyContainer}>
           <LoginInput label="Email" placeholder="Enter email" isPassword={false}/>
           <LoginInput label="Password" placeholder="Enter password" isPassword={true}/>
           <Text style={styles.forgotText}>Forgot password?</Text>
           <View>
-            <Button 
-            title="Sign in"
-            onPress={() => {setPtInfoVisible(!ptInfoVisible)}}/>
-            <Button
-              title="Sign up"
-              onPress={() => console.log('Sign up pressed!')}/>
-            
-          </View>
+        <TrimeButton text="Sign In" isSecondary={false}/>
+        <TrimeButton text="Sign Up" isSecondary={true}/>
+        </View>
         </View>
         <View>
           
