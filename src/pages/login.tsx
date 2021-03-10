@@ -30,21 +30,6 @@ export default function Login() {
      
 
       <ScrollView>
-        <Text style={{ fontFamily:"Montserrat-Bold", fontSize: 28 }}>
-            Hello world
-        </Text>
-        <Text style={{ fontSize: 28 }}>
-            HELLOO"!OOKDOPKASJOPDKASOPIDJKASOIPDJKIOASJDIOASJDIOJSA
-        </Text>
-        <Text style={{ fontFamily: "RedHatDisplay-Black", fontSize: 10 }}>
-            HELLOO"!OOKDOPKASJOPDKASOPIDJKASOIPDJKIOASJDIOASJDIOJSA
-        </Text>
-        <Text style={{ fontFamily: "RedHatDisplay-BoldItalic", fontSize: 20 }}>
-            HELLOO"!OOKDOPKASJOPDKASOPIDJKASOIPDJKIOASJDIOASJDIOJSA
-        </Text>
-        <Text style={{fontSize: 28 }}>
-            HELLOO"!OOKDOPKASJOPDKASOPIDJKASOIPDJKIOASJDIOASJDIOJSA
-        </Text>
         <View style={styles.bodyContainer}>
           <LoginInput label="Email" placeholder="Enter email" isPassword={false}/>
           <LoginInput label="Password" placeholder="Enter password" isPassword={true}/>
