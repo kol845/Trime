@@ -11,6 +11,7 @@ import Hero from './../components/Hero';
 import Footer from './../components/Footer'
 import InfoModal from '../components/modals/InfoModal'
 import LoginInput from '../components/LoginInput'
+import TrimeButton from '../components/TrimeButton'
 
 const vh = Dimensions.get('window').height/100;
 
@@ -49,14 +50,9 @@ export default function Login() {
           <LoginInput label="Password" placeholder="Enter password" isPassword={true}/>
           <Text style={styles.forgotText}>Forgot password?</Text>
           <View>
-            <Button 
-            title="Sign in"
-            onPress={() => {setPtInfoVisible(!ptInfoVisible)}}/>
-            <Button
-              title="Sign up"
-              onPress={() => console.log('Sign up pressed!')}/>
-            
-          </View>
+        <TrimeButton text="Sign In" isSecondary={false}/>
+        <TrimeButton text="Sign Up" isSecondary={true}/>
+        </View>
         </View>
         <View>
           
