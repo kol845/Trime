@@ -28,7 +28,22 @@ export default function Login() {
       <Hero  />
      
 
-      <View>
+      <ScrollView>
+        <Text style={{ fontFamily:"Montserrat-Bold", fontSize: 28 }}>
+            Hello world
+        </Text>
+        <Text style={{ fontSize: 28 }}>
+            HELLOO"!OOKDOPKASJOPDKASOPIDJKASOIPDJKIOASJDIOASJDIOJSA
+        </Text>
+        <Text style={{ fontFamily: "RedHatDisplay-Black", fontSize: 10 }}>
+            HELLOO"!OOKDOPKASJOPDKASOPIDJKASOIPDJKIOASJDIOASJDIOJSA
+        </Text>
+        <Text style={{ fontFamily: "RedHatDisplay-BoldItalic", fontSize: 20 }}>
+            HELLOO"!OOKDOPKASJOPDKASOPIDJKASOIPDJKIOASJDIOASJDIOJSA
+        </Text>
+        <Text style={{fontSize: 28 }}>
+            HELLOO"!OOKDOPKASJOPDKASOPIDJKASOIPDJKIOASJDIOASJDIOJSA
+        </Text>
         <View style={styles.bodyContainer}>
           <LoginInput label="Email" placeholder="Enter email" isPassword={false}/>
           <LoginInput label="Password" placeholder="Enter password" isPassword={true}/>
@@ -48,8 +63,7 @@ export default function Login() {
           <View/>
           <View/>
         </View>
-      </View>
-      {/* </ScrollView> */}
+      </ScrollView>
       <Footer  isSignUp={false}/>
     </View>
     
@@ -57,7 +71,8 @@ export default function Login() {
 }
 const styles = StyleSheet.create({
     loginRoot:{
-      flex: 1,
+      // Makes sure that the footer falls to the bottom
+      // flex: 1,
       paddingTop: ( Platform.OS === 'ios' ) ? 20 : StatusBar.currentHeight,
     },
 

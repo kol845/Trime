@@ -38,7 +38,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>SplashScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -53,7 +53,19 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-  <key>UIStatusBarStyle</key>
-  <string>UIStatusBarStyleDefault</string>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleDefault</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>RedHatDisplay-Black.ttf</string>
+		<string>RedHatDisplay-BlackItalic.ttf</string>
+		<string>RedHatDisplay-Bold.ttf</string>
+		<string>RedHatDisplay-BoldItalic.ttf</string>
+		<string>RedHatDisplay-Italic.ttf</string>
+		<string>RedHatDisplay-Medium.ttf</string>
+		<string>RedHatDisplay-MediumItalic.ttf</string>
+		<string>RedHatDisplay-Regular.ttf</string>
+		<string>Montserrat-Bold.ttf</string>
+	</array>
 </dict>
 </plist>

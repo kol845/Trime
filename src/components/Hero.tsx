@@ -1,8 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, Dimensions } from 'react-native';
 import HeroTopWave from './../images/svg/HeroTopWave';
 import HeroWave from '../images/svg/HeroWave';
+import globals from "./../utils/globals"
 
+const vh = Dimensions.get('window').height/100;
 
 
 
@@ -12,8 +14,6 @@ const Hero = () => {
     return( 
     
       <View>
-       
-       
          <ImageBackground  style={styles.height} source={require('./../images/hero-image.png') }>
          <HeroTopWave style={styles.topWave}/>
           <View>
@@ -22,7 +22,6 @@ const Hero = () => {
          </ImageBackground>
          <HeroWave style={styles.wave}/>
     </View>
-   
     )
   };
  
@@ -32,10 +31,10 @@ const Hero = () => {
       marginLeft:30,
       marginRight:30,
       fontSize: 60,
-      color:'#D58258',
+      color: globals.colors.primary,
       fontWeight:'900',
       textAlign:'center',
-      marginTop:140,
+      marginTop:vh*26,
       backgroundColor:'rgba(85, 110, 116,0.9)',
       borderRadius:9
     
@@ -43,9 +42,10 @@ const Hero = () => {
       
 
     },
+
     height: {
       
-      height:345,
+      height:vh*54,
       
       width:'100%',
       flex:1,
@@ -57,9 +57,9 @@ const Hero = () => {
       
     },
     wave:{
-      marginTop:280,
       
-       right:0
+      marginTop:vh*47,
+      right:0
     },
     topWave:{
       position:'absolute',
