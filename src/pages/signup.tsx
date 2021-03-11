@@ -16,7 +16,7 @@ import TrimeButton from '../components/TrimeButton'
 const vh = Dimensions.get('window').height/100;
 
 
-export default function Login() {
+export default function Signup() {
   const [ptInfoVisible, setPtInfoVisible] = useState(false);
   
   return (
@@ -26,19 +26,21 @@ export default function Login() {
         Answer the questions so we can give you the best recommendations on PT’s just for you!{"\n"}{"\n"}
         You can also fill it in on your profile later on. 
       </InfoModal>
-      <Hero  />
+      <Hero  isSignup={true}/>
 
       <ScrollView style={styles.bodyContainer}>
           
-          <LoginInput label="Email" placeholder="Enter email" isPassword={false}/>
-          <LoginInput label="Password" placeholder="Enter password" isPassword={true}/>
-          <Text style={styles.forgotText}>Forgot password?</Text>
+          <LoginInput isSignup = {true} label="Full name" placeholder="Enter full name" isPassword={false}/>
+          <LoginInput isSignup = {true} label="Email" placeholder="Enter email" isPassword={false}/>
+          <LoginInput isSignup = {true} label="Password" placeholder="Enter password" isPassword={true}/>
+
           <View>
-            <TrimeButton text="Sign In" isSecondary={false}/>
-            <TrimeButton text="Sign Up" isSecondary={true}/>
+            <TrimeButton text="Match up with a PT" isSecondary={true}/>
+            <TrimeButton text="Your first goal" isSecondary={true} isSignup={true} />
           </View>
+          <TrimeButton text="Sign up" isSecondary={false}/>
       </ScrollView>
-      <Footer  isSignUp={false}/>
+      <Footer  isSignUp={true}/>
     </View>
     
   );
@@ -49,7 +51,6 @@ const styles = StyleSheet.create({
       // flex: 1,
       // paddingTop: ( Platform.OS === 'ios' ) ? 20 : StatusBar.currentHeight,
       // height:vh,
-      // fontFamily:
     },
 
 
@@ -57,7 +58,5 @@ const styles = StyleSheet.create({
       // flex:1,
       paddingHorizontal:16,
     },
-    forgotText:{
-      textAlign:"right"      
-    }
+
   });

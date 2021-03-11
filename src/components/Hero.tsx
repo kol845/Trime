@@ -9,57 +9,69 @@ const vh = Dimensions.get('window').height/100;
 
 
 
-const Hero = () => {
+const Hero = (props:{ isSignup?:boolean}) => {
   
     return( 
     
       <View>
-         <ImageBackground  style={styles.height} source={require('./../images/hero-image.png') }>
+         <ImageBackground  style={(props.isSignup ? styles.lessHeight: styles.height)} source={require('./../images/hero-image.png') }>
          <HeroTopWave style={styles.topWave}/>
           <View>
-            <Text style={styles.text} >Trime</Text>
+            <Text style={(props.isSignup ? styles.altText: styles.text)} >Trime</Text>
           </View>
          </ImageBackground>
-         <HeroWave style={styles.wave}/>
+         <HeroWave style={(props.isSignup ? styles.higherWave: styles.wave)}/>
     </View>
     )
   };
  
   const styles = StyleSheet.create({
     text: {
-     // fontFamily:'helvetica',
       marginLeft:30,
       marginRight:30,
       fontSize: 60,
       color: globals.colors.primary,
       fontWeight:'900',
       textAlign:'center',
-      marginTop:vh*26,
+      marginTop:vh*16,
       backgroundColor:'rgba(85, 110, 116,0.9)',
       borderRadius:9
-    
-      
-      
-
     },
-
+    altText: {
+      marginLeft:30,
+      marginRight:30,
+      fontSize: 60,
+      color: globals.colors.primary,
+      fontWeight:'900',
+      textAlign:'center',
+      marginTop:vh*8,
+      backgroundColor:'rgba(85, 110, 116,0.9)',
+      borderRadius:9
+    },
     height: {
-      
-      height:vh*54,
+      height:vh*36,
       
       width:'100%',
       flex:1,
       resizeMode: "stretch",
       justifyContent: "center"
+    },
+    lessHeight: {
       
+      height:vh*26,
+      
+      width:'100%',
+      flex:1,
+      resizeMode: "stretch",
+      justifyContent: "center"
 
-        
-      
     },
     wave:{
-      
-      marginTop:vh*47,
+      marginTop:vh*28,
       right:0
+    },
+    higherWave:{
+      marginTop:vh*18,
     },
     topWave:{
       position:'absolute',

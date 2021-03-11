@@ -3,16 +3,17 @@ import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
 const styles = StyleSheet.create({
   button: {
-    width: "320px",
+
     height: 55,
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 6,
     marginTop: 16,
-    left: "7.73%",
-    right: "6.93%",
-    top: "79.68%",
-    bottom: "13.55%",
+    marginHorizontal:"auto",
+
+  },
+  removeMargins:{
+    marginTop: 6,
   },
   primary: {
     backgroundColor: "rgba(213, 130, 88, 0.7)",
@@ -30,11 +31,12 @@ const styles = StyleSheet.create({
 export default function TrimeButton(props: {
   text: string;
   isSecondary: boolean;
+  isSignup ?: boolean;
 }) {
 
   const { isSecondary, text } = props;
   return (
-    <TouchableOpacity onPress={() => { }} style={[styles.button, (isSecondary ? styles.secondary : styles.primary)]}>
+    <TouchableOpacity onPress={() => { }} style={[styles.button, (isSecondary ? styles.secondary : styles.primary), (props.isSignup ? styles.removeMargins:null)]}>
       <Text style={styles.textSignIn}> {text}</Text>
     </TouchableOpacity>
   );

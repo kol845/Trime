@@ -44,7 +44,8 @@ export default function Footer(props: { isSignUp: boolean }) {
 const styles = StyleSheet.create({
     footerContainer: {
         alignItems: 'center',
-        marginBottom: 18,
+        marginTop:16,
+        // position: 'absolute', left: 0, right: 0, bottom: 0 // Ensures that the footer lands in the bottom
         
     },
     orCountainer:{
