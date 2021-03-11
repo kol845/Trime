@@ -20,16 +20,15 @@ import { createMaterialBottomTabNavigator } from 'react-navigation-material-bott
 import Home from './../images/svg/nav-icons/Home';
 import  Icon  from 'react-native-vector-icons/FontAwesome';
 // import {Icon} from 'react-native-elements';
-
+import BottomNav from "./../navigation/bottomNav"
 
 
 
 import Login from './login';
-import Calendar from './calendar';
 
-class Feed extends Component  {
+export default function Feed (){
    
-    render() {
+  
         console.log(Icon);
         return (
 
@@ -78,12 +77,12 @@ class Feed extends Component  {
              </View>
             
              
-     
+             <BottomNav/>
          </View>
             
          );
      }
-}     
+   
 
 const styles = StyleSheet.create({
     bgTopLeft:{
@@ -174,38 +173,6 @@ const styles = StyleSheet.create({
    
        }
   });
-  const TabNavigator=createMaterialBottomTabNavigator(
-    {
-        Home:{
-            screen:Feed,
-            navigationOptions:{
-            
-                tabBarIcon:()=>(
-                    <View>
-                         <Icon  name={'home'} size={25} style={{color:'#555555'}} />
-                    </View>
-                )
-            }
-        },
-        Calendar:{
-            screen:Calendar,
-            navigationOptions:{
-               
-                tabBarIcon:()=>(
-                    <View>
-                      <Icon  name={'add-shopping-cart'} size={25} style={{color:'#555555'}} />
-                    </View>
-                )
-            }
-        }
-    },
-    {
-        initialRouteName: 'Home',
-        activeColor: '#f0edf6',
-        inactiveColor: '#226557',
-        barStyle: { backgroundColor: '#fff' },
-      }
-);
 
 
-export default createAppContainer(TabNavigator);
+

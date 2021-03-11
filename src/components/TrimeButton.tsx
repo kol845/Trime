@@ -32,11 +32,13 @@ export default function TrimeButton(props: {
   text: string;
   isSecondary: boolean;
   isSignup ?: boolean;
+  onPress ?:Function;
 }) {
 
   const { isSecondary, text } = props;
+  const onPress = props.onPress ? props.onPress: ()=>{};
   return (
-    <TouchableOpacity onPress={() => { }} style={[styles.button, (isSecondary ? styles.secondary : styles.primary), (props.isSignup ? styles.removeMargins:null)]}>
+    <TouchableOpacity onPress={onPress} style={[styles.button, (isSecondary ? styles.secondary : styles.primary), (props.isSignup ? styles.removeMargins:null)]}>
       <Text style={styles.textSignIn}> {text}</Text>
     </TouchableOpacity>
   );

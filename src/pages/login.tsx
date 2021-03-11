@@ -16,7 +16,7 @@ import TrimeButton from '../components/TrimeButton'
 const vh = Dimensions.get('window').height/100;
 
 
-export default function Login() {
+export default function Login({ navigation }) {
   const [ptInfoVisible, setPtInfoVisible] = useState(false);
   
   return (
@@ -30,13 +30,17 @@ export default function Login() {
 
       <ScrollView style={styles.bodyContainer}>
           
+        
+   
+        <View style={styles.bodyContainer}>
           <LoginInput label="Email" placeholder="Enter email" isPassword={false}/>
           <LoginInput label="Password" placeholder="Enter password" isPassword={true}/>
           <Text style={styles.forgotText}>Forgot password?</Text>
           <View>
-            <TrimeButton text="Sign In" isSecondary={false}/>
-            <TrimeButton text="Sign Up" isSecondary={true}/>
+            <TrimeButton text="Sign In" isSecondary={false} onPress={()=>navigation.navigate('Feed')}/>
+            <TrimeButton text="Sign Up" isSecondary={true} onPress={()=>navigation.navigate('Signup')}/>
           </View>
+        </View>
       </ScrollView>
       <Footer  isSignUp={false}/>
     </View>

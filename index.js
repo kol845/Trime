@@ -1,8 +1,10 @@
 import { registerRootComponent } from 'expo';
 
-import App from './App';
+// Uncomment below if you want 'Sign in' and 'Sign up'
+// import App from './App';
 
-// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
-// It also ensures that whether you load the app in the Expo client or in a native build,
-// the environment is set up appropriately
+//Uncomment below if you want 'Feed' and 'Calendar'
+import App from './src/pages/feed';
+
+
 registerRootComponent(App);

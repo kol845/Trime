@@ -16,7 +16,7 @@ import TrimeButton from '../components/TrimeButton'
 const vh = Dimensions.get('window').height/100;
 
 
-export default function Signup() {
+export default function Signup({ navigation }) {
   const [ptInfoVisible, setPtInfoVisible] = useState(false);
   
   return (
@@ -38,7 +38,7 @@ export default function Signup() {
             <TrimeButton text="Match up with a PT" isSecondary={true}/>
             <TrimeButton text="Your first goal" isSecondary={true} isSignup={true} />
           </View>
-          <TrimeButton text="Sign up" isSecondary={false}/>
+          <TrimeButton text="Sign up" isSecondary={false} onPress={()=> navigation.navigate('Signin')}/>
       </ScrollView>
       <Footer  isSignUp={true}/>
     </View>
