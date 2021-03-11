@@ -18,7 +18,8 @@ import FeedTopWave from './../images/svg/FeedTopWave'
 import {  createBottomTabNavigator,createAppContainer } from 'react-navigation';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 import Home from './../images/svg/nav-icons/Home';
-import  Icon  from 'react-native-vector-icons/FontAwesome';
+//import  Icon  from 'react-native-vector-icons/FontAwesome';
+import {Icon} from 'react-native-elements';
 
 
 
@@ -178,22 +179,22 @@ const styles = StyleSheet.create({
             screen:Feed,
             navigationOptions:{
             
-                tabBarIcon:()=>{
-                    <Text>
-                     <Icon  size={25} name={'home'} color="#900" />
-                    </Text>
-                }
+                tabBarIcon:()=>(
+                    <View>
+                         <Icon  name={'home'} size={25} style={{color:'#555555'}} />
+                    </View>
+                )
             }
         },
         LoginPage:{
             screen:Login,
             navigationOptions:{
                
-                tabBarIcon:()=>{
+                tabBarIcon:()=>(
                     <View>
-                      
+                      <Icon  name={'add-shopping-cart'} size={25} style={{color:'#555555'}} />
                     </View>
-                }
+                )
             }
         }
     },
