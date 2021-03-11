@@ -17,15 +17,22 @@ import FeedTopWave from './../images/svg/FeedTopWave'
 
 import {  createBottomTabNavigator,createAppContainer } from 'react-navigation';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
-import {Icon} from 'react-native-elements';
+import Home from './../images/svg/nav-icons/Home';
+import  Icon  from 'react-native-vector-icons/FontAwesome';
+
+
+
 
 import Login from './login';
 
 class Feed extends Component  {
+   
     render() {
+        console.log(Icon);
         return (
+
             <View>
-     
+
                 <View style={styles.headerContainer}>
      
              
@@ -170,26 +177,32 @@ const styles = StyleSheet.create({
         FeedPage:{
             screen:Feed,
             navigationOptions:{
-                tabBarLabel:'FeedPage',
+            
                 tabBarIcon:()=>{
-                    <View>
-                        
-                    </View>
+                    <Text>
+                     <Icon  size={25} name={'home'} color="#900" />
+                    </Text>
                 }
             }
         },
         LoginPage:{
             screen:Login,
             navigationOptions:{
-                tabBarLabel:'LoginPage',
+               
                 tabBarIcon:()=>{
                     <View>
-                        
+                      
                     </View>
                 }
             }
         }
-    }
+    },
+    {
+        initialRouteName: 'FeedPage',
+        activeColor: '#f0edf6',
+        inactiveColor: '#226557',
+        barStyle: { backgroundColor: '#fff' },
+      }
 );
 
 
