@@ -26,7 +26,8 @@ import  Icon  from 'react-native-vector-icons/FontAwesome';
 
 import Login from './login';
 import Calendar from './calendar';
-
+import Search from './search';
+import HamB from './hamb';
 class Feed extends Component  {
    
     render() {
@@ -193,12 +194,36 @@ const styles = StyleSheet.create({
                
                 tabBarIcon:()=>(
                     <View>
-                      <Icon  name={'add-shopping-cart'} size={25} style={{color:'#555555'}} />
+                      <Icon  name={'calendar'} size={25} style={{color:'#555555'}} />
+                    </View>
+                )
+            }
+        },
+        Search:{
+            screen:Search,
+            navigationOptions:{
+               
+                tabBarIcon:()=>(
+                    <View>
+                      <Icon  name={'search'} size={25} style={{color:'#555555'}} />
+                    </View>
+                )
+            }
+        },
+        HamB:{
+            screen:HamB,
+            navigationOptions:{
+               
+                tabBarIcon:()=>(
+                    <View>
+                      <Icon  name={'bars'} size={25} style={{color:'#555555'}} />
                     </View>
                 )
             }
         }
+    
     },
+  
     {
         initialRouteName: 'Home',
         activeColor: '#f0edf6',
